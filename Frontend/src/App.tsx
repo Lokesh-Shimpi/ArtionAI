@@ -5,9 +5,12 @@ import { Builder } from './pages/Builder';
 import { AppProvider } from './context/AppContext';
 import './index.css';
 
+
 function App() {
   const isProduction = process.env.NODE_ENV === 'production';
-  
+  const nodeEnvUrl = import.meta.env.VITE_NODE_ENV;
+  console.log('VITE_NODE_ENV:', nodeEnvUrl);
+
   return (
     <AppProvider>
       <BrowserRouter>
